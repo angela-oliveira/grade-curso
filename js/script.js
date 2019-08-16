@@ -1,13 +1,12 @@
-// const card = document.querySelector('.container-row')
+const card = document.querySelector('.container-row')
 // const getJson = 'disciplinas.json'
 
-fetch('disciplinas.json')
+fetch('data/disciplinas.json')
     .then(res => res.json())
     .then(json => {
         jsoncar = json
         criar(json)
     })
-    // .then(json => criar(json))
     .catch(erro => error())
 
 function error(){
@@ -37,19 +36,3 @@ function exibir(dis){
   </div>`
   return div
 }
-
-// criar(disciplinas)
-// getDisciplinas(getJson)
-
-// function getDisciplinas(url){
-//     fetch(url)
-//         .then(res => res.json())
-//         .then(json => criar(json))
-//         .catch(erro => error())
-// }
-
-// function criar(disciplinas){
-//     card.innerHTML = ''
-//     disciplinas.map(i => card.insertAdjacentHTML('beforeend', exibir(i)))
-
-// }
